@@ -1,0 +1,12 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<form class="form" action="#" method="post">
+	{% csrf_token %}
+	
+	<div class="form-group" style="font-size: 20px;">
+		<label for="Question"> Question : </label>
+		<textarea class="form-control" rows="15" id="answer" name="answer"></textarea>
+	</div>
+	<button type="submit" class="btn btn-success">Post Answer</button>
+</form>
+{% endblock content %}

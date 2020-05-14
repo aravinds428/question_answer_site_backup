@@ -1,0 +1,22 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+<div class="media border p-3">
+	<div class="media-body">
+		<h3 style="color: slateblue;"><strong>{{ question.title }}</strong></h3>
+		<h4 style="color:green;"><small><i>{{ question.asked_user }} on {{ question.date_posted }}</i></small></h4>
+		<p style="font-size: 20px;"> {{ question.content }} </p>
+	</div>
+</div>
+
+<h4 style="color:red;"> Answers </h4>
+{% for answer in answers %}
+<div class="media border p-3">
+	<div class="media-body">
+		<!--<h3 style="color: slateblue;"><strong>{{ question.title }}</strong></h3> -->
+		<h4 style="color:green;"><small><i>{{ answer.answered_user }} on {{ answer.date_posted }}</i></small></h4>
+		<p style="font-size: 20px;"> {{ answer.answer_content }} </p>
+	</div>
+</div>
+{% endfor %}
+{% endblock content %}

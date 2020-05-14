@@ -1,0 +1,15 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<form class="form" action="/createquestion/" method="post">
+	{% csrf_token %}
+	<div class="form-group" style="font-size: 20px;">
+		<label for="title"> Title : </label>
+		<input type=text class="form-control" id="title" name="title" >
+	</div>
+	<div class="form-group" style="font-size: 20px;">
+		<label for="Question"> Question : </label>
+		<textarea class="form-control" rows="15" id="question" name="question"></textarea>
+	</div>
+	<button type="submit" class="btn btn-success">Post Question</button>
+</form>
+{% endblock content %}

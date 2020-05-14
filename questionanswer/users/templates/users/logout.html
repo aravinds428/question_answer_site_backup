@@ -1,0 +1,12 @@
+{% extends "mainapp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h2 style="position:relative;left:10px;top:25px;font-size:20px;"> You have been logged out </h2>
+    <div class="col-sm-3 col-md-6 col-lg-8" >
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                <a class="ml-2" href="{% url 'login' %}">Login</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
